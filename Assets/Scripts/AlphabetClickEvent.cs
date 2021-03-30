@@ -7,11 +7,8 @@ using UnityEngine.EventSystems;
 public class AlphabetClickEvent : MonoBehaviour
 {
 
-    public GameObject sourceDest;
-
     public List<GameObject> sourceObject = new List<GameObject>();
 
-    [SerializeField]
     private GameObject currentObject;
 
     // Start is called before the first frame update
@@ -26,9 +23,27 @@ public class AlphabetClickEvent : MonoBehaviour
         
     }
 
+    IEnumerator Rotate(float duration)
+    {
+        float startRotation = currentObject.transform.eulerAngles.y;
+        float endRotation = startRotation + 360.0f;
+        float t = 0.0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            float yRotation = Mathf.Lerp(startRotation, endRotation, t / duration) % 360.0f;
+            currentObject.transform.eulerAngles = new Vector3(currentObject.transform.eulerAngles.x, yRotation, currentObject.transform.eulerAngles.z);
+            yield return null;
+        }
+    }
+
     public void AlphabetPress()
     {
         string alphabet = EventSystem.current.currentSelectedGameObject.GetComponent<Button>().GetComponentInChildren<Text>().text;
+        if(alphabet!="")
+        {
+            StartCoroutine(Rotate(5));
+        }
         if(alphabet=="A")
         {
             currentObject.SetActive(false);
