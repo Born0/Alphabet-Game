@@ -59,5 +59,61 @@ public class AlphabetClickEvent : MonoBehaviour
             currentObject = sourceObject[4];
             currentObject.SetActive(true);
         }
+        ////////////////
+        else if (alphabet == "F")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[5];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "G")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[6];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "H")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[7];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "I")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[8];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "J")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[9];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "K")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[10];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "L")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[11];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "M")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[12];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "N")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[13];
+            currentObject.SetActive(true);
+        }
+
     }
 }
