@@ -11,8 +11,8 @@ public class DragObject : MonoBehaviour
 {
 
     private Vector3 mOffset;
-
-
+    public GameObject charA;
+    public GameObject busket;
 
     private float mZCoord;
 
@@ -59,12 +59,15 @@ public class DragObject : MonoBehaviour
         transform.position = GetMouseAsWorldPoint() + mOffset;
     }
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+       // Debug.Log(collision.gameObject.tag);
+    }
 
     private void OnMouseUp()
     {
 
-        Debug.Log(gameObject.transform.position.z);
+        //Debug.Log(gameObject.transform.position.z);
         
         /*if (gameObject.transform.position.z >= 8 && gameObject.transform.position.z <= 8.5)
         {

@@ -40,6 +40,9 @@ TagManager:
   - x
   - y
   - z
+  - Busket
+  - wall
+  - TV
   layers:
   - Default
   - TransparentFX
