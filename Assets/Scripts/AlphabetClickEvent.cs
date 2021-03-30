@@ -129,6 +129,79 @@ public class AlphabetClickEvent : MonoBehaviour
             currentObject = sourceObject[13];
             currentObject.SetActive(true);
         }
+        ///////////////
+        else if (alphabet == "O")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[14];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "P")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[15];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "Q")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[16];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "R")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[17];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "S")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[18];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "T")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[19];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "U")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[20];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "V")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[21];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "W")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[22];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "X")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[23];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "Y")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[24];
+            currentObject.SetActive(true);
+        }
+        else if (alphabet == "Z")
+        {
+            currentObject.SetActive(false);
+            currentObject = sourceObject[25];
+            currentObject.SetActive(true);
+        }
 
     }
 }
