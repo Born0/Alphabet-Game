@@ -59,9 +59,14 @@ public class DragObject : MonoBehaviour
         transform.position = GetMouseAsWorldPoint() + mOffset;
     }
 
+
+
     private void OnMouseUp()
     {
-        if (gameObject.transform.position.z >= 8 && gameObject.transform.position.z <= 8.5)
+
+        Debug.Log(gameObject.transform.position.z);
+        
+        /*if (gameObject.transform.position.z >= 8 && gameObject.transform.position.z <= 8.5)
         {
             gameObject.transform.position = placeHolder[0].transform.position;
         }
@@ -92,6 +97,6 @@ public class DragObject : MonoBehaviour
         else if (gameObject.transform.position.z >= 3 && gameObject.transform.position.z <= 4)
         {
             gameObject.transform.position = placeHolder[7].transform.position;
-        }
+        }*/
     }
 }
