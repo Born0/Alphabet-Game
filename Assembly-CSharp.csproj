@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlphabetClickEvent.cs" />
+    <Compile Include="Assets\Scripts\DragObject.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
