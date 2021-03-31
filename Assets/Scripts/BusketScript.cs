@@ -15,7 +15,7 @@ public class BusketScript : MonoBehaviour
     private List<GameObject> destroyObject = new List<GameObject>();
     private GameObject currentObject;
     public static bool collideCheck = false;
-    int c=1;
+   
 
     void Start()
     {
@@ -60,17 +60,21 @@ public class BusketScript : MonoBehaviour
 
     public void Reset()
     {
-        Debug.Log(c);
-        if(c<destroyObject.Count)
+        Debug.Log(destroyObject.Count);
+       
+        if (destroyObject.Count != 0)
         {
-            Destroy(destroyObject[destroyObject.Count - c]);
-            c++;
-        } 
-        else if (c == destroyObject.Count)
-        {
-            Destroy(destroyObject[destroyObject.Count - c]);
-            c = 1;
+            if ( destroyObject.Count>=0)
+            {
+                Destroy(destroyObject[destroyObject.Count - 1]);
+                destroyObject.RemoveAt(destroyObject.Count - 1);
+                
+            }
+           
         }
+       
+        
+        
     }
        
 
