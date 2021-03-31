@@ -12,7 +12,10 @@ public class BusketScript : MonoBehaviour
     private string word;
     private int indexer=0;
     public List<GameObject> sourceObject = new List<GameObject>();
+    private List<GameObject> destroyObject = new List<GameObject>();
     private GameObject currentObject;
+    public static bool collideCheck = false;
+    int c=1;
 
     void Start()
     {
@@ -49,14 +52,36 @@ public class BusketScript : MonoBehaviour
         Debug.Log(check);
         check = false;
         word = "";
+        foreach (var item in destroyObject)
+        {
+            Destroy(item);
+        }
     }
 
-   
+    public void Reset()
+    {
+        Debug.Log(c);
+        if(c<destroyObject.Count)
+        {
+            Destroy(destroyObject[destroyObject.Count - c]);
+            c++;
+        } 
+        else if (c == destroyObject.Count)
+        {
+            Destroy(destroyObject[destroyObject.Count - c]);
+            c = 1;
+        }
+    }
+       
+
+
 
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         word += collision.gameObject.tag;
+        destroyObject.Add(collision.gameObject);
+        collideCheck = true;
     }
 }

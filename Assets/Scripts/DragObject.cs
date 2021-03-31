@@ -21,8 +21,6 @@ public class DragObject : MonoBehaviour
     private Vector3 objectPosition;
     private Quaternion rotation;
 
-
-
     void OnMouseDown()
 
     {
@@ -37,8 +35,6 @@ public class DragObject : MonoBehaviour
 
         objectPosition = gameObject.transform.position;
         rotation = gameObject.transform.rotation;
-
-
 
     }
 
@@ -74,6 +70,16 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp()
     {
-        Instantiate(gameObject,objectPosition,rotation);
+        if(BusketScript.collideCheck)
+        {
+            Instantiate(gameObject, objectPosition, rotation);
+        }
+        else
+        {
+            gameObject.transform.position = objectPosition;
+        }
+
+        BusketScript.collideCheck = false;
+
     }
 }
