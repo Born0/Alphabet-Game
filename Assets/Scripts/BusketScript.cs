@@ -6,20 +6,17 @@ using UnityEngine.UI;
 
 public class BusketScript : MonoBehaviour
 {
-    /*private readonly string[] words = {"apple","ball","cat", "doll", "egg", "fish" , "goat", "hen", "icecream" , "jet", "key", "lion" , "monkey", "necklace", "orange" , "pot", "queen", "rat", "star", "tree", "umbrella", "violin", "wagon", "xmas"
-                                   ,"yak","zebra"};*/
     public List<string> words = new List<string>();
 
-    private bool check=false;
-    private string word;
-    private int indexer=0;
     public List<GameObject> sourceObject = new List<GameObject>();
     private List<GameObject> destroyObject = new List<GameObject>();
     private GameObject currentObject;
-    public static bool collideCheck = false;
 
+    public static bool collideCheck = false;
     public Text welerrorText;
-   
+    private bool check = false;
+    private string word;
+    private int indexer = 0;
 
     void Start()
     {
@@ -55,10 +52,7 @@ public class BusketScript : MonoBehaviour
                 break;
             }
         }
-        /*for(int i=0;i<wordObject.Capacity-1;i++)
-        {
-            wordObject[i].transform.position = placeHolder[i].transform.position;
-        }*/
+    
 
         //Debug.Log(check);
         check = false;
