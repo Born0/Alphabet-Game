@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BusketScript : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class BusketScript : MonoBehaviour
     private List<GameObject> destroyObject = new List<GameObject>();
     private GameObject currentObject;
     public static bool collideCheck = false;
+
+    public Text welerrorText;
    
 
     void Start()
@@ -42,6 +46,13 @@ public class BusketScript : MonoBehaviour
             {
                 check = true;
                 indexer++;
+                welerrorText.text = "Well Done";
+                break;
+            }
+            else
+            {
+                welerrorText.text = "Try Again";
+                break;
             }
         }
         /*for(int i=0;i<wordObject.Capacity-1;i++)
@@ -49,13 +60,21 @@ public class BusketScript : MonoBehaviour
             wordObject[i].transform.position = placeHolder[i].transform.position;
         }*/
 
-        Debug.Log(check);
+        //Debug.Log(check);
         check = false;
         word = "";
+        StartCoroutine(WaitError(1));
+        
         foreach (var item in destroyObject)
         {
             Destroy(item);
         }
+    }
+
+    private IEnumerator WaitError(float waittime)
+    {
+        yield return new WaitForSeconds(waittime);
+        welerrorText.text = "";
     }
 
     public void Reset()
@@ -76,10 +95,6 @@ public class BusketScript : MonoBehaviour
         
         
     }
-       
-
-
-
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -87,5 +102,15 @@ public class BusketScript : MonoBehaviour
         word += collision.gameObject.tag;
         destroyObject.Add(collision.gameObject);
         collideCheck = true;
+    }
+
+    public void ExitScreen()
+    {
+        Application.Quit();
+    }
+
+    public void BackToMain()
+    {
+        SceneManager.LoadScene(0);
     }
 }

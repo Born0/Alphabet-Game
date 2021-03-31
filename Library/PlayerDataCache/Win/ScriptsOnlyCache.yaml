@@ -69,9 +69,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12424}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 13284}
+      Script: {instanceID: 13282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,11 +136,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12424}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12920}
+    - Class: 114
+      Script: {instanceID: 13280}
     - Class: 114
       Script: {instanceID: 13282}
-    - Class: 114
-      Script: {instanceID: 13284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -390,7 +390,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: d05604bf5f2ae69e0dbbf41d820e3a9e
+      Hash: 657f9f78cbb86bc8871759dc427dc84b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AlphabetClickEvent
@@ -608,4 +608,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Lvl1.unity
   - Assets/Scenes/Lvl2.unity
-  playerPath: D:/Work/Jam/Alphabet game/Build v1/Alphabet game.exe
+  playerPath: C:/Users/munta/Desktop/BrainJam/Alphabet-game/Pc/Alphabet game.exe
