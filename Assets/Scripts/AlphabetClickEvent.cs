@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class AlphabetClickEvent : MonoBehaviour
 {
@@ -203,5 +204,10 @@ public class AlphabetClickEvent : MonoBehaviour
             currentObject.SetActive(true);
         }
 
+    }
+
+    public void Next()
+    {
+        SceneManager.LoadSceneAsync(1);
     }
 }
