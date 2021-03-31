@@ -18,6 +18,9 @@ public class DragObject : MonoBehaviour
 
     public List<GameObject> placeHolder = new List<GameObject>();
 
+    private Vector3 objectPosition;
+    private Quaternion rotation;
+
 
 
     void OnMouseDown()
@@ -31,6 +34,11 @@ public class DragObject : MonoBehaviour
         // Store offset = gameobject world pos - mouse world pos
 
         mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
+
+        objectPosition = gameObject.transform.position;
+        rotation = gameObject.transform.rotation;
+
+
 
     }
 
@@ -66,40 +74,6 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp()
     {
-
-        //Debug.Log(gameObject.transform.position.z);
-        
-        /*if (gameObject.transform.position.z >= 8 && gameObject.transform.position.z <= 8.5)
-        {
-            gameObject.transform.position = placeHolder[0].transform.position;
-        }
-        else if(gameObject.transform.position.z >= 7 && gameObject.transform.position.z <= 8 )
-        {
-            gameObject.transform.position = placeHolder[1].transform.position;
-        }
-        else if (gameObject.transform.position.z >= 6.5 && gameObject.transform.position.z <= 7)
-        {
-            gameObject.transform.position = placeHolder[2].transform.position;
-        }
-        else if (gameObject.transform.position.z >= 6 && gameObject.transform.position.z <= 6.5)
-        {
-            gameObject.transform.position = placeHolder[3].transform.position;
-        }
-        else if (gameObject.transform.position.z >= 5 && gameObject.transform.position.z <=6 )
-        {
-            gameObject.transform.position = placeHolder[4].transform.position;
-        }
-        else if (gameObject.transform.position.z >= 4.5 && gameObject.transform.position.z <= 5)
-        {
-            gameObject.transform.position = placeHolder[5].transform.position;
-        }
-        else if (gameObject.transform.position.z >= 4 && gameObject.transform.position.z <= 4.5)
-        {
-            gameObject.transform.position = placeHolder[6].transform.position;
-        }
-        else if (gameObject.transform.position.z >= 3 && gameObject.transform.position.z <= 4)
-        {
-            gameObject.transform.position = placeHolder[7].transform.position;
-        }*/
+        Instantiate(gameObject,objectPosition,rotation);
     }
 }
