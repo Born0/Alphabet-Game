@@ -57,21 +57,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11420}
+      Script: {instanceID: 11252}
     - Class: 114
-      Script: {instanceID: 11586}
+      Script: {instanceID: 11418}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 12024}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12424}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 13284}
+      Script: {instanceID: 13116}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -124,23 +124,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11420}
+      Script: {instanceID: 11252}
     - Class: 114
-      Script: {instanceID: 11586}
+      Script: {instanceID: 11418}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 12024}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12270}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12424}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 13282}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13284}
+      Script: {instanceID: 13116}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -608,4 +608,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Lvl1.unity
   - Assets/Scenes/Lvl2.unity
-  playerPath: D:/Work/Jam/Alphabet game/Pc/Alphabet game.exe
+  playerPath: D:/Work/Jam/Alphabet game/Build v1/Alphabet game.exe

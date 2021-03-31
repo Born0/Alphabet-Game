@@ -49,12 +49,12 @@ public class BusketScript : MonoBehaviour
             else
             {
                 welerrorText.text = "Try Again";
-                break;
+                //break;
             }
         }
     
 
-        //Debug.Log(check);
+        Debug.Log(check);
         check = false;
         word = "";
         StartCoroutine(WaitError(1));
